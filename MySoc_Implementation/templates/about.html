@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}
+About us
+{% endblock title %}
+{% block body %}
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Appartment NO</th>
+      <th scope="col">Owner</th>
+      <th scope="col">Size</th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+  {%for c in mycomp2 %}
+
+    <tr>
+      <td>
+         {{c.appartmentno}}
+      </td>
+      <td>
+         {{c.ownerid}}
+      </td>
+      <td>
+         {{c.size}}
+      </td>
+      <td>
+         {{c.vacancy}}
+      </td>
+    </tr>
+    
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock body %}
